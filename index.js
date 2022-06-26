@@ -1,0 +1,7 @@
+var btnpeliculas = document.getElementById("btnpeliculas")
+    btnclientes = document.getElementById("btnclientes")
+    btnactores= document.getElementById("btnactores")
+    btncategorias= document.getElementById("btncategorias")
+    btnestructuras= document.getElementById("btnestructuras")
+    btnblockchain = document.getElementById("btnblockchain")
+    btnlogout= document.getElementById("btnpeliculas")
