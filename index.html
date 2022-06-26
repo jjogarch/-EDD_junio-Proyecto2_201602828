@@ -10,39 +10,98 @@
 
     <title>MovieCats</title>
   </head>
-  <body>
-<!-----------------------------------------NAVBAR ADMIN----------------------------------------------------------->
-    <div id="navadmin" style="display: none;">
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <h1 class="navbar-brand" style="color:green">MovieCats</h1>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <button class="btn btn-outline-success me-2" type="button" id="btnpeliculas">Peliculas</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btnclientes">Clientes</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btnactores">Actores</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btncategorias">Categorias</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btnestructuras">Estructuras</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btnblockchain">Blockchain</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btnlogout">Logout</button> 
-                <form class="d-flex" >
-                    <div id="etiqueta"><h1 style="color:white"> Bienvenido</h1></div>
-                </form>
-              </div>
+<body>
+
+    <div id="vistaadmin" style="display: none;">
+        <!-----------------------------------------NAVBAR ADMIN----------------------------------------------------------->
+            <div id="navadmin" style="display: block;">
+                <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                    <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div >
+                        <img style="width:60px; height: 60px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4May2yv82z5_Nlw6f0xyyigaTPKLrpTDcST0puPALCNVGXUfXcQeow_nIwxD0UtCL5Ew&usqp=CAU" alt="">
+                    </div>
+                    <h1 class="navbar-brand" style="color:green">  MovieCats</h1>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <button class="btn btn-outline-success me-2" type="button" id="btncargamasiva">Carga masiva</button>  
+                        <button class="btn btn-outline-success me-2" type="button" id="btnestructuras">Estructuras</button>
+                        <button class="btn btn-outline-success me-2" type="button" id="btnblockchain">Blockchain</button>
+                        <button class="btn btn-outline-success me-2" type="button" id="btnlogout">Logout</button> 
+                        <div class="d-flex flex-row-reverse bd-highlight">
+                            <div id="etiqueta" class="p-2 bd-highlight"><h1 style="color:white"></h1></div>
+                        </div>
+                    </div>
+                    </div>
+                </nav>    
             </div>
-          </nav>    
+        <!-----------------------------------------VISTA CARGA MASIVA----------------------------------------------------------->
+        <div id="vistacargamasiva" style="display:none">
+            <!-- PELICULAS-->
+            <div>
+                <h3>Carga masiva Peliculas</h3>
+                <input id="btnpeliculas" class="btn btn-outline-success me-2" type="file" accept="json" onchange="abrirArchivoUsuarios(event)">
+                <label for="btnpeliculas" class="form-label" style="color: white;">Seleccion de archivo</label>
+                <div id="contenedorcmavl"> <!--AVL peliculas--></div>
+            </div>
+            <!-- CLIENTES -->
+            <div>
+                <h3>Carga masiva Clientes</h3>
+                <input id="btnclientes" class="btn btn-outline-success me-2" type="file" accept="json" onchange="abrirArchivoUsuarios(event)">
+                <label for="btnpeliculas" class="form-label" style="color: white;">Seleccion de archivo</label>
+                <div id="contenedorcmavl"> <!--AVL peliculas--></div>
+            </div>
+            <!-- ACTORES -->
+            <div>
+                <h3>Carga masiva Actores</h3>
+                <input id="btnactores" class="btn btn-outline-success me-2" type="file" accept="json" onchange="abrirArchivoUsuarios(event)">
+                <label for="btnpeliculas" class="form-label" style="color: white;">Seleccion de archivo</label>
+                <div id="contenedorcmavl"> <!--AVL peliculas--></div>
+            </div>
+            <!-- CATEGORIAS -->
+            <div>
+                <h3>Carga masiva Categorias</h3>
+                <input id="btncategorias" class="btn btn-outline-success me-2" type="file" accept="json" onchange="abrirArchivoUsuarios(event)">
+                <label for="btnpeliculas" class="form-label" style="color: white;">Seleccion de archivo</label>
+                <div id="contenedorcmavl"> <!--AVL peliculas--></div>
+            </div>
+        </div>
+
+            <!----------------------------------VISTA ESTRUCTURAS ---------------------------------------------------------->        
+            <div id="vistaestructuras" style="display: none;"><h1>ESTRUCTURAS</h1>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="estructurapeliculas" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="estructurapeliculas">Peliculas</label>
+                
+                    <input type="radio" class="btn-check" name="btnradio" id="estructuraclientes" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="estructuraclientes">Clientes</label>
+                
+                    <input type="radio" class="btn-check" name="btnradio" id="estructuraactores" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="estructuraactores">Actores</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="estructuracategorias" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="estructuracategorias">Categorias</label>
+                    <hr>
+                    <div id="mostrargrafico"></div>
+
+                </div>
+
+
+
+            </div>
     </div>
+<!---------------------------------- VISTA LOGIN ---------------------------------------------------------->        
+<div id="vistalogin" style="display: block;">
 <!---------------------------------- INIT BAR ---------------------------------------------------------->        
-    <div id="initbar">
-        <ul class="nav justify-content-center bg-dark">
-            <li class="nav-item">
-              <h1 class="nav-link" style="color: green;">MOVIECATS</h1>
-            </li>
-    </div>
-<!----------------------------------VISTA LOGIN ---------------------------------------------------------->        
-    <div id="vistalogin">
+<div id="initbar" >
+    <ul class="nav justify-content-center bg-dark">
+        <li class="nav-item">
+          <h1 class="nav-link" style="color: green;">MOVIECATS</h1>
+        </li>
+</div>
+<!---------------------------------- ---------------------------------------------------------->        
+    <div >
         <section class="vh-100" style="background-color: grey;">
             <div class="container py-5 h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
@@ -53,22 +112,22 @@
                       <h3 class="mb-5">Sign in</h3>
           
                       <div class="form-outline mb-4">
-                        <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-                        <label class="form-label" for="typeEmailX-2">Email</label>
+                        <input type="email" id="txtusername" class="form-control form-control-lg" />
+                        <label class="form-label" for="txtusername">Username</label>
                       </div>
           
                       <div class="form-outline mb-4">
-                        <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-                        <label class="form-label" for="typePasswordX-2">Password</label>
+                        <input type="password" id="txtpassword" class="form-control form-control-lg" />
+                        <label class="form-label" for="txtpassword">Password</label>
                       </div>
           
                       <!-- Checkbox -->
                       <div class="form-check d-flex justify-content-start mb-4">
                         <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                        <label class="form-check-label" for="form1Example3"> Remember password </label>
+                        <label class="form-check-label" for="form1Example3"> Administrador </label>
                       </div>
           
-                      <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                      <button class="btn btn-primary btn-lg btn-block" type="button" id="fctlogin">Login</button>
           
                       <hr class="my-4">
 
@@ -80,6 +139,11 @@
             </div>
           </section>
     </div>
+</div>
+
+      
+      
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
