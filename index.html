@@ -12,19 +12,18 @@
   </head>
   <body>
 <!-----------------------------------------NAVBAR ADMIN----------------------------------------------------------->
-    <div id="navadmin" style="display: block;">
+    <div id="navadmin" style="display: none;">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <h1 class="navbar-brand" style="color:green">MovieCats</h1>
-              
               <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <button class="btn btn-outline-success me-2" type="button" id="btnpeliculas">Carga Peliculas</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btnclientes">Carga Clientes</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btnactores">Carga Actores</button>
-                <button class="btn btn-outline-success me-2" type="button" id="btncategorias">Carga Categorias</button>
+                <button class="btn btn-outline-success me-2" type="button" id="btnpeliculas">Peliculas</button>
+                <button class="btn btn-outline-success me-2" type="button" id="btnclientes">Clientes</button>
+                <button class="btn btn-outline-success me-2" type="button" id="btnactores">Actores</button>
+                <button class="btn btn-outline-success me-2" type="button" id="btncategorias">Categorias</button>
                 <button class="btn btn-outline-success me-2" type="button" id="btnestructuras">Estructuras</button>
                 <button class="btn btn-outline-success me-2" type="button" id="btnblockchain">Blockchain</button>
                 <button class="btn btn-outline-success me-2" type="button" id="btnlogout">Logout</button> 
@@ -35,8 +34,14 @@
             </div>
           </nav>    
     </div>
-
-        
+<!---------------------------------- INIT BAR ---------------------------------------------------------->        
+    <div id="initbar">
+        <ul class="nav justify-content-center bg-dark">
+            <li class="nav-item">
+              <h1 class="nav-link" style="color: green;">MOVIECATS</h1>
+            </li>
+    </div>
+<!----------------------------------VISTA LOGIN ---------------------------------------------------------->        
     <div id="vistalogin">
         <section class="vh-100" style="background-color: grey;">
             <div class="container py-5 h-100">
